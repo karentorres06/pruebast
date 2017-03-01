@@ -1,17 +1,21 @@
 language: php
 php:
-- 5.5
 - 7.0
+install:
+ - pear install PHP_CodeSniffer
+ - phpenv rehash
+ - sudo apt-get update -q
+ - sudo apt-get install ruby-full -y
+ - gem install sass 
+ install: ./install-dependencies.sh
 
-env:
-- BD=pgsql
+before_script:
+- phpenv rehash
+- phpcs -i
 
-before_install:
-- sudo apt-get update -q
-- sudo apt-get install ruby-full -y
-- gem install sass
 
-install: ./install-dependencies.sh
+
+
 
 before_script: true
 
