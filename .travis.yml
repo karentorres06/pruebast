@@ -1,27 +1,19 @@
 language: php
 php:
+- 5.5
 - 7.0
-install:
- - pear PHP_CodeSniffer
- - phpenv rehash
- - sudo apt-get update -q
- - sudo apt-get install ruby-full -y
- - gem install sass 
- install: ./install-dependencies.sh
 
-before_script:
-- phpenv rehash
-- phpcs -i
+env:
+- BD=pgsql
 
+before_install:
+- sudo apt-get update -q
+- sudo apt-get install ruby-full -y
+- gem install sass
 
-
-
+install: ./install-dependencies.sh
 
 before_script: true
 
 script: 
 - phpunit Test.php
-- phpunit index.php
-- phpunit /pages/admin.php
-- phpunit /pages/login.php
-- phpunit /pages/logout.php
