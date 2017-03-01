@@ -21,4 +21,4 @@ script:
 - phpunit Persona.php
 - phpunit plato.php
 - phpunit Usuario.php
-- phpunit detallepedido.php
+- phpunit detpedido.php
