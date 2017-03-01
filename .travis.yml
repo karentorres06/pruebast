@@ -16,4 +16,8 @@ install: ./install-dependencies.sh
 before_script: true
 
 script: 
+- phpunit Test.php
 - phpunit index.php
+- phpunit /pages/admin.php
+- phpunit /pages/login.php
+- phpunit /pages/logout.php
