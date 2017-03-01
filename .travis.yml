@@ -17,3 +17,4 @@ before_script: true
 
 script: 
 - phpunit Test.php
+- phpunit pedido.php
