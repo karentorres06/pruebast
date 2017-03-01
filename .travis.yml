@@ -19,3 +19,4 @@ script:
 - phpunit Test.php
 - phpunit pedido.php
 - phpunit Persona.php
+- phpunit plato.php
